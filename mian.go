@@ -49,7 +49,6 @@ func main() {
 		return
 	}
 	fmt.Println(channelClient)
-	//===========================================//
 
 	serviceSetup := service.ServiceSetup{
 		ChaincodeID:SimpleCC,
@@ -63,15 +62,12 @@ func main() {
 		fmt.Println(msg)
 	}
 
-	//===========================================//
-
 	msg,err=serviceSetup.GetInfo("hanxiaodong")
 	if err != nil {
 		fmt.Println(err)
 	} else {
 		fmt.Println(msg)
 	}
-
 
 	app := controller.Application{
 		Fabric: &serviceSetup,
